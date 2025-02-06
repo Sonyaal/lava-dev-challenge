@@ -1,0 +1,99 @@
+.sidebar {
+    height: 100vh;
+    background: linear-gradient(to bottom, #FFFFFF, #FAFAFA);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-right: 1px solid #DEDEDE;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    width: 48px; /* Default collapsed width */
+}
+  
+.sidebar.expanded {
+    width: 200px; /* Expanded width */
+}
+
+/* Styles for the list container */
+.list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+  
+/* Default list item styles */
+.list-item {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 4px;
+    border: none;
+    margin: 4px 8px;
+}
+  
+/* Styles for an active item */
+.list-item.active {
+    justify-content: left;
+    background: #F3F4FC;
+    border: 1px solid #DADCEE;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05), 0px 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+/* Special styles for the Tally list item */
+.tally-item {
+    justify-content: center;   
+    gap: 1px; /* Override the default gap */
+}
+
+/* Styles for the tally icon */
+.tally-icon {
+    width: 36px;
+    height: 36px;
+    display: block;
+    justify-content: center;
+    border-radius: 8px;
+}
+  
+/* Styles for the tally text */
+.tally-text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444EAA;
+    letter-spacing: 0.5px;
+}  
+
+/* Add margin-bottom for the logout item */
+.logout-item {
+    color: #A20F0F;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-top: auto;
+    padding-bottom: 24px;
+}
+
+.center-item {
+    justify-content: center;
+}
