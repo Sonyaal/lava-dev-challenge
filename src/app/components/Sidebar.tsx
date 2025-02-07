@@ -70,8 +70,10 @@ const Sidebar: React.FC = () => {
             <img src="../../../logout.svg" alt="Logout"/>
             {isExpanded && <span>Logout</span>}
           </li>
-          <li className="list-item" onClick={() => handleClick('profile')}>
+          <li className="list-item">
+            <a href="https://www.linkedin.com/in/link3dinaccount/" target="_blank" rel="noopener noreferrer">
             <img src="../../../profile1.svg" alt="Profile"/>
+            </a>
             {isExpanded && (
               <div>
                 <div><b>Don't Ruin It</b></div>
