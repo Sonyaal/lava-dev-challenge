@@ -1,27 +1,23 @@
 'use client';
 
-import { useRouter } from 'next/navigation'; // Next.js App Router navigation
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import '../assets/styles/Sidebar.css';
 
 const Sidebar: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [activeItem, setActiveItem] = useState<string | null>(null);
-  const router = useRouter(); // Next.js router
+  const router = useRouter(); 
 
-  // Function to handle item clicks (including logout)
   const handleClick = (item: string) => {
     if (item === "logout") {
-      // Clear session data
       localStorage.clear();
       sessionStorage.clear();
 
-      // Redirect to login page
       router.push("/login");
       return;
     }
 
-    // Toggle sidebar expansion and active item
     if (activeItem === item) {
       setIsExpanded(false);
       setActiveItem(null);
@@ -55,7 +51,7 @@ const Sidebar: React.FC = () => {
           {isExpanded && <span>Fulfillment</span>}
         </li>
 
-        {/* Divider - Changes based on expansion */}
+        {/* Divider */}
         <li className="list-item center-item" onClick={() => setIsExpanded(!isExpanded)}>
           <img src={isExpanded ? "../../../images/expandeddivider.svg" : "../../../images/divider.svg"} alt="divider" />
         </li>
@@ -66,9 +62,9 @@ const Sidebar: React.FC = () => {
         </li>
       </ul>
 
-      {/* Bottom Section: Profile and Logout */}
+      {/* Bottom Section */}
       <div className="bottom-container">
-        {/* Logout Button - Redirects to Login */}
+        {/* Logout Button*/}
         <li className="list-item logout-item" onClick={() => handleClick('logout')}>
           <img src="../../../images/logout.svg" alt="Logout" />
           {isExpanded && <span>Logout</span>}

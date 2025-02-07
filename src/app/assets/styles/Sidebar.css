@@ -12,14 +12,13 @@
     align-items: flex-start;
     transition: width 0.3s ease;
     overflow: hidden;
-    width: 48px; /* Default collapsed width */
+    width: 48px; 
 }
   
 .sidebar.expanded {
-    width: 200px; /* Expanded width */
+    width: 200px; 
 }
 
-/* Styles for the list container */
 .list {
     display: flex;
     flex-direction: column;
@@ -28,8 +27,7 @@
     margin: 0;
     width: 100%;
 }
-  
-/* Default list item styles */
+
 .list-item {
     display: flex;
     justify-content: center;
@@ -45,7 +43,6 @@
     margin: 4px 8px;
 }
   
-/* Styles for an active item */
 .list-item.active {
     justify-content: left;
     background: #F3F4FC;
@@ -58,18 +55,16 @@
 .list-item.products-item:hover,
 .list-item.fulfillment-item:hover,
 .list-item.integrations-item:hover {
-    background: #F3F4FC; /* Same as active background */
-    border: 1px solid #DADCEE; /* Same as active border */
+    background: #F3F4FC;
+    border: 1px solid #DADCEE; 
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05), 0px 2px 4px rgba(255, 255, 255, 0.05); /* Same as active shadow */
 }
 
-/* Special styles for the Tally list item */
 .tally-item {
     justify-content: center;   
-    gap: 1px; /* Override the default gap */
+    gap: 1px; 
 }
 
-/* Styles for the tally icon */
 .tally-icon {
     width: 36px;
     height: 36px;
@@ -78,7 +73,6 @@
     border-radius: 8px;
 }
   
-/* Styles for the tally text */
 .tally-text {
     font-weight: 500;
     font-size: 24px;
@@ -87,7 +81,6 @@
     letter-spacing: 0.5px;
 }  
 
-/* Add margin-bottom for the logout item */
 .logout-item {
     color: #A20F0F;
 }
