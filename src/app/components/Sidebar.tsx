@@ -57,7 +57,7 @@ const Sidebar: React.FC = () => {
 
         {/* Divider - Changes based on expansion */}
         <li className="list-item center-item" onClick={() => setIsExpanded(!isExpanded)}>
-          <img src={isExpanded ? "../../../images/expandeddivider.svg" : "../../../divider.svg"} alt="divider" />
+          <img src={isExpanded ? "../../../images/expandeddivider.svg" : "../../../images/divider.svg"} alt="divider" />
         </li>
 
         <li className={`list-item integrations-item ${activeItem === 'integrations' ? 'active' : ''}`} onClick={() => handleClick('integrations')}>
