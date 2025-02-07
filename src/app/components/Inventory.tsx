@@ -11,14 +11,14 @@ type InventoryItem = {
 };
 
 const inventoryItems: InventoryItem[] = [
-  { id: 1, name: "Gildan T-Shirt - Red / M", stock: 13, image: "../../../tshirt-red.svg" },
-  { id: 2, name: "Gildan T-Shirt - Red / L", stock: 46, image: "../../../tshirt-red.svg" },
-  { id: 3, name: "Gildan T-Shirt - Black / S", stock: 21, image: "../../../tshirt-black.svg" },
-  { id: 4, name: "Gildan T-Shirt - Black / M", stock: 34, image: "../../../tshirt-black.svg" },
-  { id: 5, name: "Gildan T-Shirt - Black / L", stock: 27, image: "../../../tshirt-black.svg" },
-  { id: 6, name: "Gildan T-Shirt - White / S", stock: 34, image: "../../../tshirt-white.svg" },
-  { id: 7, name: "Gildan T-Shirt - White / M", stock: 51, image: "../../../tshirt-white.svg" },
-  { id: 8, name: "Gildan T-Shirt - White / L", stock: 29, image: "../../../tshirt-white.svg" },
+  { id: 1, name: "Gildan T-Shirt - Red / M", stock: 13, image: "../../../images/tshirt-red.svg" },
+  { id: 2, name: "Gildan T-Shirt - Red / L", stock: 46, image: "../../../images/tshirt-red.svg" },
+  { id: 3, name: "Gildan T-Shirt - Black / S", stock: 21, image: "../../../images/tshirt-black.svg" },
+  { id: 4, name: "Gildan T-Shirt - Black / M", stock: 34, image: "../../../images/tshirt-black.svg" },
+  { id: 5, name: "Gildan T-Shirt - Black / L", stock: 27, image: "../../../images/tshirt-black.svg" },
+  { id: 6, name: "Gildan T-Shirt - White / S", stock: 34, image: "../../../images/tshirt-white.svg" },
+  { id: 7, name: "Gildan T-Shirt - White / M", stock: 51, image: "../../../images/tshirt-white.svg" },
+  { id: 8, name: "Gildan T-Shirt - White / L", stock: 29, image: "../../../images/tshirt-white.svg" },
 ];
 
 export default function Inventory() {
@@ -49,7 +49,7 @@ export default function Inventory() {
         {/* Search Bar */}
         <div className="search-container">
           {/* Search Icon */}
-          <img src="../../../search.svg" alt="Search" className="search-icon" />
+          <img src="../../../images/search.svg" alt="Search" className="search-icon" />
           {/* Search Input */}
           <input
             type="text"
@@ -61,8 +61,8 @@ export default function Inventory() {
 
         {/* Filter & Sort Icons */}
         <div className="search-icons">
-          <img src="../../../filter.svg" alt="Filter" />
-          <img src="../../../sort.svg" alt="Sort" />
+          <img src="../../../images/filter.svg" alt="Filter" />
+          <img src="../../../images/sort.svg" alt="Sort" />
         </div>
 
         {/* Add New Button */}
@@ -85,7 +85,7 @@ export default function Inventory() {
               {/* Stock Counter */}
               <div className="stock-counter">
                 <button onClick={() => handleDecrease(item.id)} style={{ background: "none", border: "none", cursor: "pointer" }}>
-                  <img src="../../../minus-icon.svg" alt="Decrease" width="24" height="24" />
+                  <img src="../../../images/minus-icon.svg" alt="Decrease" width="24" height="24" />
                 </button>
 
                 <div className={`stock-display ${item.stock <= 24 ? "low-stock" : ""}`}>
@@ -94,7 +94,7 @@ export default function Inventory() {
                 </div>
 
                 <button onClick={() => handleIncrease(item.id)} style={{ background: "none", border: "none", cursor: "pointer" }}>
-                  <img src="../../../plus-icon.svg" alt="Increase" width="24" height="24" />
+                  <img src="../../../images/plus-icon.svg" alt="Increase" width="24" height="24" />
                 </button>
               </div>
             </div>
