@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "../assets/styles/header.css"; // Ensure styles are correctly imported
+import "../assets/styles/Header.css"; // Ensure styles are correctly imported
 
 interface HeaderProps {
   activeTab: string;
