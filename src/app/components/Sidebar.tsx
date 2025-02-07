@@ -40,7 +40,7 @@ const Sidebar: React.FC = () => {
           {isExpanded && <span className="tally-text">Tally</span>}
         </li>
 
-        <li className={`list-item ${!isExpanded ? 'materials-item' : ''} ${activeItem === 'materials' ? 'active' : ''}`} onClick={() => handleClick('materials')}>
+        <li className={`list-item materials-item ${!isExpanded ? 'materials-item-closed' : ''} ${activeItem === 'materials' ? 'active' : ''}`} onClick={() => handleClick('materials')}>
           <img src="../../../images/materials.svg" alt="Materials" /> 
           {isExpanded && <span>Materials</span>}
         </li>
