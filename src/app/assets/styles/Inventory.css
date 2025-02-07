@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300;400;600&display=swap'); /* For counter numbers */
+
+/* ========== Inventory Container ========== */
+.inventory-container {
+  width: 95%; /* Ensures it stretches to the available space */
+  /* max-width: 100%; Prevents it from being too narrow */
+  margin: 12px auto; /* Centers it with top & bottom spacing */
+  padding: 8px; /* Match Figma's padding */
+  background: white;
+  border-radius: 8px; /* Match Figma */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  border: 1px solid #ccc;
+}
+  
+  /* ========== Header Section ========== */
+  .header-container {
+    display: flex;
+    align-items: center; /* Aligns vertically */
+    justify-content: space-between; /* Spreads items apart */
+    gap: 16px; /* Adds space between elements */
+    padding: 10px;
+  }
+  
+/* ========== Search Bar ========== */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  width: 100%; /* Ensures full width */
+  max-width: 400px; /* Adjust width as needed */
+  position: relative;
+  border-radius: 4px;
+}
+
+/* Input Styling */
+.search-container input {
+  flex-grow: 1; /* Ensures input expands properly */
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding-left: 30px; /* Space for search icon */
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+/* Search Icon on the Left */
+.search-icon {
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Icons on the Right */
+.search-icons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-right: auto; /* Pushes icons to the right */
+}
+
+/* Individual Icon Styling */
+.search-icons img {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.2s ease;
+}
+
+.search-icons img:hover {
+  opacity: 0.7;
+}
+  
+  /* ========== Inventory List ========== */
+  .inventory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Match Figma's 12px gap */
+    padding: 0 12px;
+  }
+  
+  /* Ensure everything inside stays aligned */
+  .inventory-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #D9D9D9; /* Slightly darker border */
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .product-info img {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background: #fff;
+  }
+  
+  .product-info span {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* ========== Quantity Buttons ========== */
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .quantity-controls button {
+    width: 30px;
+    height: 30px;
+    background: #f5f5f5;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .quantity-display {
+    padding: 6px 12px;
+    background: #ffdd57;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  /* ========== Add New Button ========== */
+  .add-button {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .add-button button {
+    background: #444EAA;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .add-button button:hover {
+    background: #5A64C4;
+  }
+  
+  /* ========== Stock Counter Wrapper ========== */
+.stock-counter {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  /* ========== Buttons ========== */
+  .counter-button {
+    width: 75px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #666;
+    background: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  /* ========== Stock Display ========== */
+  .stock-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    font-weight: bold;
+    background: white;
+  }
+  
+  /* Main stock number */
+  .stock-main {
+    font-size: 20px;
+    color: #333333;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 6px 0;
+    font-weight: 300;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    font-family: 'Chivo Mono', monospace; 
+  }
+  
+  /* Sub stock display (24 PCS) */
+  .stock-sub {
+    font-size: 12px;
+    color: #808080;
+    width: 100%;
+    text-align: center;
+    padding: 4px 0;
+    background: #F2F2F2;
+    font-weight: 300;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    font-family: 'Chivo Mono', monospace; 
+  }
+  
+  /* Low stock warning (changes stock background to match UI) */
+  .low-stock .stock-main {
+    background: #FAF2E3;
+    border: 1px solid #c49a5d;
+  }
+  
+  .low-stock .stock-sub {
+    background: #c49a5d;
+    border: 1px solid #c49a5d;
+    color: #fff;
+  }
+
+  /* ========== Product Image Container ========== */
+  .product-image {
+    width: 64px; /* Adjust width */
+    height: 64px; /* Keep it square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #D1D5DB;
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* ========== Product Image Itself ========== */
+  .product-image img {
+    width: 90%; /* Scale image to fit inside */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures image doesn't stretch */
+    border-radius: 8px; /* Soft corners */
+  }

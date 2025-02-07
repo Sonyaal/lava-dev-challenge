@@ -21,7 +21,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <body style={{ margin: 0}}>
         <div style={{ display: 'flex' }}>
           <Sidebar />
-          <div>test</div>
           <div style={{ marginLeft: '250px', padding: '20px', flex: 1 }}>
             {children}
           </div>
