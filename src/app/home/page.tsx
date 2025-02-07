@@ -1,14 +1,12 @@
 "use client"; // Ensures it runs on the client side
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Sidebar from "@/app/components/Sidebar";
 import Inventory from "@/app/components/Inventory";
 import Header from "@/app/components/Header";
 import OrderQueue from "@/app/components/OrderQueue";
 
 export default function Home() {
-  const router = useRouter();
   const [activeTab, setActiveTab] = useState("inventory"); // Default to inventory
 
   return (

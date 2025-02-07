@@ -1,6 +1,4 @@
 import React from 'react';
-import Sidebar from './components/Sidebar';
-
 import localFont from 'next/font/local'
  
 // Font files can be colocated inside of `app`
