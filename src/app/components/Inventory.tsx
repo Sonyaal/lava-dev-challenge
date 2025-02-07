@@ -37,14 +37,12 @@ export default function Inventory() {
     ));
   };
 
-  // Filter items: Only show exact matches
   const filteredItems = searchQuery
     ? items.filter(item => item.name.toLowerCase() === searchQuery.toLowerCase())
     : items;
 
   return (
     <div className="inventory-container">
-
       <div className="header-container">
         {/* Search Bar */}
         <div className="search-container">
@@ -59,7 +57,7 @@ export default function Inventory() {
           />
         </div>
 
-        {/* Filter & Sort Icons */}
+        {/* Filter / Sort Icons */}
         <div className="search-icons">
           <img src="../../../images/filter.svg" alt="Filter" />
           <img src="../../../images/sort.svg" alt="Sort" />
