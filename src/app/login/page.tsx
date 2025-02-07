@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import "../assets/styles/Login.css"; // Adjust import based on your structure
+import "../assets/styles/Login.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -13,7 +13,6 @@ export default function Login() {
     e.preventDefault();
     console.log("Logging in with:", { email, password });
 
-    // Example: Redirect user to home after login
     router.push("/home");
   };
 
