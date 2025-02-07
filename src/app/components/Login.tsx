@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import '../assets/styles/Login.css'; // Import login styles
+import '../assets/styles/Login.css';
 import '../assets/styles/Sidebar.css';
 
 export default function Login() {
@@ -13,12 +13,11 @@ export default function Login() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Logging in with:", { email, password });
-    router.push("/home"); // Redirect after login
+    router.push("/home");
   };
 
   return (
     <div className="login-container">
-      {/* <h2>Login to Tally</h2> */}
       <form onSubmit={handleSubmit}>
         <label>Email:</label>
         <input 
