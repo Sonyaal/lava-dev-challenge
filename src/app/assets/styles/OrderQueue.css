@@ -1,0 +1,20 @@
+.product-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes status to the right */
+  width: 100%; /* Ensures it stretches full width */
+  gap: 12px; /* Adds spacing between elements */
+}
+
+/* Ensure the status text aligns to the right */
+.status-text-processing {
+  margin-left: auto; /* Pushes status text to the right */
+  color: #C19A4D;
+  font-weight: bold;
+}
+
+.status-text-complete {
+  margin-left: auto; /* Pushes status text to the right */
+  color: #008000;
+  font-weight: bold;
+}
