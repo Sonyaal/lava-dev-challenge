@@ -23,6 +23,7 @@ const inventoryItems: InventoryItem[] = [
 
 export default function Inventory() {
   const [items, setItems] = useState<InventoryItem[]>(inventoryItems);
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   const handleIncrease = (id: number) => {
     setItems(items.map(item =>
@@ -36,57 +37,71 @@ export default function Inventory() {
     ));
   };
 
+  // Filter items: Only show exact matches
+  const filteredItems = searchQuery
+    ? items.filter(item => item.name.toLowerCase() === searchQuery.toLowerCase())
+    : items;
+
   return (
     <div className="inventory-container">
 
-    <div className="header-container">
-    {/* Search Bar */}
-    <div className="search-container">
-        {/* Search Icon on the Left */}
-        <img src="../../../search.svg" alt="Search" className="search-icon" />
+      <div className="header-container">
+        {/* Search Bar */}
+        <div className="search-container">
+          {/* Search Icon */}
+          <img src="../../../search.svg" alt="Search" className="search-icon" />
+          {/* Search Input */}
+          <input
+            type="text"
+            placeholder="Search Materials"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
 
-        {/* Search Input */}
-        <input type="text" placeholder="Search Materials" />
-    </div>
-    {/* Filter & Sort Icons on the Right */}
-    <div className="search-icons">
-        <img src="../../../filter.svg" alt="Filter" />
-        <img src="../../../sort.svg" alt="Sort" />
-    </div>
+        {/* Filter & Sort Icons */}
+        <div className="search-icons">
+          <img src="../../../filter.svg" alt="Filter" />
+          <img src="../../../sort.svg" alt="Sort" />
+        </div>
 
-    {/* Add New Button */}
-    <div className="add-button">
-        <button>+ Add New</button>
-    </div>
-    </div>
+        {/* Add New Button */}
+        <div className="add-button">
+          <button>+ Add New</button>
+        </div>
+      </div>
 
       {/* Inventory List */}
       <div className="inventory-list">
-        {items.map((item) => (
-          <div key={item.id} className="inventory-item">
-            {/* Product Name */}
-            <div className="product-info">
+        {filteredItems.length > 0 ? (
+          filteredItems.map((item) => (
+            <div key={item.id} className="inventory-item">
+              {/* Product Name */}
+              <div className="product-info">
                 <img src={item.image} alt={item.name} />
-            <span className="product-name">{item.name}</span>
-            </div>
-
-            {/* Stock Counter */}
-            <div className="stock-counter">
-            <button onClick={() => handleDecrease(item.id)} style={{ background: "none", border: "none", cursor: "pointer" }}>
-                    <img src="../../../minus-icon.svg" alt="Decrease" width="24" height="24" />
-                </button>
-
-              <div className={`stock-display ${item.stock <= 24 ? "low-stock" : ""}`}>
-                <div className="stock-main">{item.stock}</div>
-                <div className="stock-sub">24 PCS</div>
+                <span className="product-name">{item.name}</span>
               </div>
 
-                <button onClick={() => handleIncrease(item.id)} style={{ background: "none", border: "none", cursor: "pointer" }}>
-                    <img src="../../../plus-icon.svg" alt="Increase" width="24" height="24" />
+              {/* Stock Counter */}
+              <div className="stock-counter">
+                <button onClick={() => handleDecrease(item.id)} style={{ background: "none", border: "none", cursor: "pointer" }}>
+                  <img src="../../../minus-icon.svg" alt="Decrease" width="24" height="24" />
                 </button>
+
+                <div className={`stock-display ${item.stock <= 24 ? "low-stock" : ""}`}>
+                  <div className="stock-main">{item.stock}</div>
+                  <div className="stock-sub">24 PCS</div>
+                </div>
+
+                <button onClick={() => handleIncrease(item.id)} style={{ background: "none", border: "none", cursor: "pointer" }}>
+                  <img src="../../../plus-icon.svg" alt="Increase" width="24" height="24" />
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p className="no-results">No matching items found.</p>
+        )}
       </div>
     </div>
   );
