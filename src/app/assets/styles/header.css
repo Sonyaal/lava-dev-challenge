@@ -29,7 +29,7 @@
 }
 
 .subtitle {
-    color: #AAAAAA; /* Sets the text color to blue */
+    color: #AAAAAA; 
     font-weight: 500;
 }
 
@@ -70,7 +70,7 @@ button.active {
     align-items: center;
     font-size: 14px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
 }
   
