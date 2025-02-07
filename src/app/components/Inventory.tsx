@@ -82,7 +82,7 @@ export default function Inventory() {
 
               {/* Stock Counter */}
               <div className="stock-counter">
-                <button onClick={() => handleDecrease(item.id)} style={{ background: "none", border: "none", cursor: "pointer" }}>
+                <button onClick={() => handleDecrease(item.id)} style={{ background: "none", border: "none", cursor: "pointer",  justifyContent: "center"}}>
                   <img src="../../../images/minus-icon.svg" alt="Decrease" width="24" height="24" />
                 </button>
 
@@ -91,7 +91,7 @@ export default function Inventory() {
                   <div className="stock-sub">24 PCS</div>
                 </div>
 
-                <button onClick={() => handleIncrease(item.id)} style={{ background: "none", border: "none", cursor: "pointer" }}>
+                <button onClick={() => handleIncrease(item.id)} style={{ background: "none", border: "none", cursor: "pointer",  justifyContent: "center" }}>
                   <img src="../../../images/plus-icon.svg" alt="Increase" width="24" height="24" />
                 </button>
               </div>
