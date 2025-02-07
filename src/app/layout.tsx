@@ -10,7 +10,7 @@ const myFont = localFont({
 
 export const metadata = {
   title: 'Tally',
-  description: 'Description of your app',
+  description: 'Tally is a inventory management system.',
 };
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
