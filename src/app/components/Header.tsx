@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "../assets/styles/Header.css"; // Ensure styles are correctly imported
+import "../assets/styles/Header.css";
 
 interface HeaderProps {
   activeTab: string;
@@ -15,7 +15,6 @@ const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
         Materials<span className="subtitle"> / Blanks</span>
       </h2>
 
-      {/* Tab Buttons */}
       <div className="header-button">
         <div className="container">
           <button
