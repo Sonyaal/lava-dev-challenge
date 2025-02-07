@@ -19,12 +19,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={myFont.className}>
       <body style={{ margin: 0}}>
-        <div style={{ display: 'flex' }}>
-          <Sidebar />
-          <div style={{ marginLeft: '250px', padding: '20px', flex: 1 }}>
             {children}
-          </div>
-        </div>
       </body>
     </html>
   );
