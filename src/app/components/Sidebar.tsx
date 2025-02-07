@@ -30,21 +30,21 @@ const Sidebar: React.FC = () => {
           {isExpanded && <span className="tally-text">Tally</span>}
         </li>
         <li 
-          className={`list-item ${activeItem === 'materials' ? 'active' : ''}`}
+          className={`list-item materials-item ${activeItem === 'materials' ? 'active' : ''}`}
           onClick={() => handleClick('materials')}
         >
           <img src="../../../materials.svg" alt="Materials" /> 
           {isExpanded && <span>Materials</span>}
         </li>
         <li 
-          className={`list-item ${activeItem === 'products' ? 'active' : ''}`}
+          className={`list-item products-item ${activeItem === 'products' ? 'active' : ''}`}
           onClick={() => handleClick('products')}
         >
           <img src="../../../products.svg" alt="Products" /> 
           {isExpanded && <span>Products</span>}
         </li>
         <li 
-          className={`list-item ${activeItem === 'fulfillment' ? 'active' : ''}`}
+          className={`list-item fulfillment-item ${activeItem === 'fulfillment' ? 'active' : ''}`}
           onClick={() => handleClick('fulfillment')}
           >
           <img src="../../../fulfillment.svg" alt="Fulfillment" /> 
@@ -56,7 +56,7 @@ const Sidebar: React.FC = () => {
           <img src={isExpanded ? "../../../expandeddivider.svg" : "../../../divider.svg"} alt="divider"/>
         </li>
         <li 
-          className={`list-item ${activeItem === 'integrations' ? 'active' : ''}`}
+          className={`list-item integrations-item ${activeItem === 'integrations' ? 'active' : ''}`}
           onClick={() => handleClick('integrations')}
         >
           <img src="../../../integrations.svg" alt="Integrations" /> 

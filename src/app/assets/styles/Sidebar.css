@@ -31,8 +31,8 @@
   
 /* Default list item styles */
 .list-item {
-    justify-content: center;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 6px 10px;
@@ -42,7 +42,6 @@
     white-space: nowrap;
     transition: background 0.2s ease, box-shadow 0.2s ease;
     border-radius: 4px;
-    border: none;
     margin: 4px 8px;
 }
   
@@ -52,6 +51,15 @@
     background: #F3F4FC;
     border: 1px solid #DADCEE;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05), 0px 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+.list-item.materials-item:hover,
+.list-item.products-item:hover,
+.list-item.fulfillment-item:hover,
+.list-item.integrations-item:hover {
+    background: #F3F4FC; /* Same as active background */
+    border: 1px solid #DADCEE; /* Same as active border */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05), 0px 2px 4px rgba(255, 255, 255, 0.05); /* Same as active shadow */
 }
 
 /* Special styles for the Tally list item */
@@ -88,10 +96,10 @@
     flex-direction: column;
     list-style-type: none;
     padding: 0;
-    margin: 0;
     width: 100%;
     margin-top: auto;
     padding-bottom: 24px;
+
 }
 
 .center-item {
